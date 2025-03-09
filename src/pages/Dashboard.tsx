@@ -8,9 +8,12 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <h1>Dashboard</h1>
+      <Link to="/list">
+        <button>Go to List Page</button>
+      </Link>
       <div className="favorites">
-        <h3>Go to the items list Page:</h3>
-        <ul>
+        <h3>List Of The Favorites</h3>
+        <ul className='fav_ul'>
           {favorites.map((item) => (
             <li key={item.id}>
               {item.title}
@@ -18,9 +21,7 @@ const Dashboard = () => {
           ))}
         </ul>
       </div>
-      <Link to="/list">
-        <button>Go to List Items Page</button>
-      </Link>
+      
     </div>
   );
 };
